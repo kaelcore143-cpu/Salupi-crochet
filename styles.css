@@ -231,7 +231,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
-  background: url('images/fondo-hero.png') center/cover no-repeat;
+  background: url('fondo-hero.png') center/cover no-repeat;
   position: relative;
   overflow: hidden;
 }
