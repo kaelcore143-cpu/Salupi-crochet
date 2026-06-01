@@ -572,7 +572,8 @@ main {
 .vendido-card img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #faf0f3;
   border-radius: 15px;
   margin-top: 20px;
   margin-bottom: 15px;
@@ -773,9 +774,10 @@ main {
 .item img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 15px;
   margin-bottom: 15px;
+  background: #faf0f3;
 }
 
 .item h3 {
@@ -965,6 +967,8 @@ main {
   
   .vendido-card img {
     height: 180px;
+    object-fit: contain;
+    background: #faf0f3;
   }
   
   .mascota-vendidos {

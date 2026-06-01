@@ -1,0 +1,43 @@
+========================================
+ARCHIVOS ELIMINADOS - Salupi Crochet
+Fecha: 31 de mayo de 2026
+Total: 24 archivos
+========================================
+
+--- ARCHIVOS DE BACKUP (3) ---
+1. index-backup.html
+2. styles-backup.css
+3. styles-new.css
+
+--- IMÁGENES NO UTILIZADAS (21) ---
+
+Imágenes generales no usadas:
+4. 13-removebg-preview.png
+5. ChatGPT Image 13 feb 2026, 04_53_55 p.m..png
+
+Imágenes WhatsApp no referenciadas:
+6. WhatsApp Image 2026-01-09 at 7.12.35 PM.jpeg
+7. WhatsApp Image 2026-02-12 at 3.47.47 PM (1).jpeg
+8. WhatsApp Image 2026-02-12 at 3.47.47 PM (2).jpeg
+9. WhatsApp Image 2026-02-12 at 3.47.49 PM.jpeg
+10. WhatsApp Image 2026-02-12 at 3.47.51 PM (1).jpeg
+11. WhatsApp Image 2026-02-12 at 3.47.51 PM (2).jpeg
+12. WhatsApp Image 2026-02-12 at 3.47.53 PM (1).jpeg
+13. WhatsApp Image 2026-02-12 at 3.47.53 PM.jpeg
+14. WhatsApp Image 2026-02-12 at 3.47.55 PM (2).jpeg
+15. WhatsApp Image 2026-02-12 at 3.47.55 PM.jpeg
+16. WhatsApp Image 2026-02-12 at 3.47.56 PM (1).jpeg
+17. WhatsApp Image 2026-02-12 at 3.47.56 PM (2).jpeg
+18. WhatsApp Image 2026-02-12 at 3.47.56 PM (3).jpeg
+19. WhatsApp Image 2026-02-12 at 3.47.56 PM.jpeg
+20. WhatsApp Image 2026-02-12 at 3.47.57 PM (1).jpeg
+21. WhatsApp Image 2026-02-12 at 3.47.57 PM (2).jpeg
+22. WhatsApp Image 2026-02-12 at 3.47.57 PM.jpeg
+23. WhatsApp Image 2026-02-12 at 3.47.58 PM.jpeg
+
+========================================
+ESPACIO LIBERADO: Aproximadamente 5-6 MB
+========================================
+
+NOTA: Los archivos restantes son los únicos
+que se utilizan activamente en el sitio web.
