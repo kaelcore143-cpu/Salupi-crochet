@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amigurumis | Salupi Crochet</title>
+  <meta name="description" content="Amigurumis tejidos a mano por Salupi Crochet. Muñecos personalizados, personajes y peluches únicos.">
+  <meta property="og:title" content="Amigurumis | Salupi Crochet">
+  <meta property="og:description" content="Muñecos tejidos a mano, únicos y personalizables.">
+  <meta property="og:image" content="salupi-hero.png">
+  <link rel="icon" href="salupi-favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +18,11 @@
 
 <header>
   <nav class="navbar">
-    <div class="logo">SALUPI CROCHET</div>
-    <ul class="nav-links">
+    <div class="logo"><img src="salupi-logo.png" alt="Salupi Crochet" height="50">SALUPI CROCHET</div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="index.html#productos">Productos</a></li>
       <li><a href="index.html#contacto">Contacto</a></li>
@@ -34,33 +42,39 @@
   <div class="catalogo-grid">
 
     <div class="item">
-      <img src="WhatsApp Image 2026-01-09 at 7.14.49 PM.jpeg" alt="">
-      <h3>Areglo floral con muñeco personalizado</h3>
+      <img src="amigurumi-arreglo-floral.jpeg" alt="Arreglo floral con muñeco personalizado en crochet" loading="lazy">
+      <h3>Arreglo floral con muñeco</h3>
+      <button class="btn-agregar" data-nombre="Arreglo floral con muñeco" data-imagen="amigurumi-arreglo-floral.jpeg">🛒 Agregar</button>
     </div>
 
     <div class="item">
-      <img src="medico.jpeg" alt="">
+      <img src="amigurumi-medico.jpeg" alt="Muñecos personalizados en crochet" loading="lazy">
       <h3>Muñecos personalizados</h3>
+      <button class="btn-agregar" data-nombre="Muñecos personalizados" data-imagen="amigurumi-medico.jpeg">🛒 Agregar</button>
     </div>
 
     <div class="item">
-      <img src="WhatsApp Image 2026-05-31 at 10.42.06 PM.jpeg" alt="">
+      <img src="amigurumi-personajes.jpeg" alt="Personajes tejidos en crochet" loading="lazy">
       <h3>Personajes</h3>
+      <button class="btn-agregar" data-nombre="Personajes" data-imagen="amigurumi-personajes.jpeg">🛒 Agregar</button>
     </div>
 
     <div class="item">
-      <img src="WhatsApp Image 2026-05-31 at 10.42.12 PM.jpeg" alt="">
+      <img src="amigurumi-peluches.jpeg" alt="Peluches tejidos en crochet" loading="lazy">
       <h3>Peluches</h3>
+      <button class="btn-agregar" data-nombre="Peluches" data-imagen="amigurumi-peluches.jpeg">🛒 Agregar</button>
     </div>
 
     <div class="item">
-      <img src="WhatsApp Image 2026-05-31 at 10.42.17 PM.jpeg" alt="">
+      <img src="amigurumi-centro-mesa.jpeg" alt="Centro de mesa en crochet" loading="lazy">
       <h3>Centro de mesa</h3>
+      <button class="btn-agregar" data-nombre="Centro de mesa" data-imagen="amigurumi-centro-mesa.jpeg">🛒 Agregar</button>
     </div>
 
     <div class="item">
-      <img src="WhatsApp Image 2026-05-31 at 10.42.15 PM.jpeg" alt="">
+      <img src="amigurumi-profesiones.jpeg" alt="Amigurumis de profesiones en crochet" loading="lazy">
       <h3>Profesiones</h3>
+      <button class="btn-agregar" data-nombre="Profesiones" data-imagen="amigurumi-profesiones.jpeg">🛒 Agregar</button>
     </div>
 
 
@@ -68,5 +82,80 @@
   </div>
 </section>
 
+<!-- CARRITO FLOTANTE -->
+<button class="carrito-bubble" id="carrito-bubble" aria-label="Ver carrito">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <path d="M16 10a4 4 0 01-8 0"/>
+  </svg>
+  <span class="carrito-count" id="carrito-count">0</span>
+</button>
+<div class="carrito-panel" id="carrito-panel" aria-hidden="true">
+  <div class="carrito-header">
+    <h3>🧶 Tu carrito</h3>
+    <button class="carrito-close" id="carrito-close" aria-label="Cerrar carrito">&times;</button>
+  </div>
+  <div class="carrito-items" id="carrito-items">
+    <p class="carrito-vacio">Tu carrito está vacío</p>
+  </div>
+  <div class="carrito-footer">
+    <button class="btn btn-vaciar" id="btn-vaciar">Vaciar carrito</button>
+    <a href="#" class="btn btn-whatsapp-carrito" id="btn-whatsapp-carrito" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+  </div>
+</div>
+<div class="carrito-overlay" id="carrito-overlay"></div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function() {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.classList.toggle('is-active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('nav-open');
+      hamburger.classList.remove('is-active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+<script>
+  const WA_NUMBER = '573052782134';
+  function getCarrito() { return JSON.parse(localStorage.getItem('salupi_carrito') || '[]'); }
+  function saveCarrito(c) { localStorage.setItem('salupi_carrito', JSON.stringify(c)); }
+  function agregarAlCarrito(nombre, imagen) {
+    const carrito = getCarrito();
+    const idx = carrito.findIndex(i => i.nombre === nombre);
+    if (idx >= 0) { carrito[idx].cantidad++; } else { carrito.push({ nombre, imagen, cantidad: 1 }); }
+    saveCarrito(carrito); renderCarrito(); mostrarNotificacion('¡Agregado al carrito!');
+  }
+  function renderCarrito() {
+    const carrito = getCarrito();
+    const container = document.getElementById('carrito-items');
+    const countEl = document.getElementById('carrito-count');
+    const total = carrito.reduce((s, i) => s + i.cantidad, 0);
+    countEl.textContent = total;
+    countEl.style.display = total > 0 ? 'flex' : 'none';
+    if (carrito.length === 0) { container.innerHTML = '<p class="carrito-vacio">Tu carrito está vacío</p>'; return; }
+    container.innerHTML = carrito.map((item, idx) => `<div class="carrito-item"><img src="${item.imagen}" alt="${item.nombre}"><div class="carrito-item-info"><p>${item.nombre}</p><div class="carrito-qty"><button onclick="cambiarCantidad(${idx},-1)">−</button><span>${item.cantidad}</span><button onclick="cambiarCantidad(${idx},1)">+</button></div></div><button class="carrito-item-del" onclick="eliminarItem(${idx})">×</button></div>`).join('');
+    const msg = carrito.map(i => `• ${i.nombre} x${i.cantidad}`).join('%0A');
+    document.getElementById('btn-whatsapp-carrito').href = `https://wa.me/${WA_NUMBER}?text=Hola%20Salupi!%20Quiero%20hacer%20este%20pedido:%0A${msg}`;
+  }
+  function cambiarCantidad(idx, delta) { const c = getCarrito(); c[idx].cantidad += delta; if (c[idx].cantidad <= 0) c.splice(idx,1); saveCarrito(c); renderCarrito(); }
+  function eliminarItem(idx) { const c = getCarrito(); c.splice(idx,1); saveCarrito(c); renderCarrito(); }
+  function mostrarNotificacion(msg) { const n = document.createElement('div'); n.className = 'carrito-notif'; n.textContent = msg; document.body.appendChild(n); setTimeout(() => n.classList.add('visible'), 10); setTimeout(() => { n.classList.remove('visible'); setTimeout(() => n.remove(), 300); }, 2000); }
+  document.addEventListener('DOMContentLoaded', function() {
+    renderCarrito();
+    document.getElementById('carrito-bubble').addEventListener('click', () => { document.getElementById('carrito-panel').classList.add('open'); document.getElementById('carrito-overlay').classList.add('visible'); });
+    function cerrarCarrito() { document.getElementById('carrito-panel').classList.remove('open'); document.getElementById('carrito-overlay').classList.remove('visible'); }
+    document.getElementById('carrito-close').addEventListener('click', cerrarCarrito);
+    document.getElementById('carrito-overlay').addEventListener('click', cerrarCarrito);
+    document.getElementById('btn-vaciar').addEventListener('click', () => { saveCarrito([]); renderCarrito(); });
+    document.querySelectorAll('.btn-agregar').forEach(btn => { btn.addEventListener('click', function(e) { e.preventDefault(); agregarAlCarrito(this.dataset.nombre, this.dataset.imagen); }); });
+  });
+</script>
 </body>
 </html>

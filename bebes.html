@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bebés | Salupi Crochet</title>
+  <meta name="description" content="Prendas para bebé tejidas a mano por Salupi Crochet. Cubre pañales y vestidos únicos y personalizables.">
+  <meta property="og:title" content="Bebés | Salupi Crochet">
+  <meta property="og:description" content="Prendas para bebé tejidas a mano, únicas y personalizables.">
+  <meta property="og:image" content="salupi-hero.png">
+  <link rel="icon" href="salupi-favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +18,11 @@
 
 <header>
   <nav class="navbar">
-    <div class="logo">SALUPI CROCHET</div>
-    <ul class="nav-links">
+    <div class="logo"><img src="salupi-logo.png" alt="Salupi Crochet" height="50">SALUPI CROCHET</div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="index.html#productos">Productos</a></li>
       <li><a href="index.html#contacto">Contacto</a></li>
@@ -34,22 +42,82 @@
   <div class="catalogo-grid">
 
     <div class="item">
-      <img src="WhatsApp Image 2026-02-12 at 3.47.54 PM.jpeg" alt="" width="250px">
+      <img src="bebes-cubrepanial-1.jpeg" alt="Cubre pañal tejido en crochet" loading="lazy">
       <h3>Cubre pañal</h3>
+      <button class="btn-agregar" data-nombre="Cubre pañal" data-imagen="bebes-cubrepanial-1.jpeg">🛒 Agregar</button>
     </div>
 
     <div class="item">
-      <img src="WhatsApp Image 2026-02-12 at 3.47.54 PM (1).jpeg" alt="" width="250px">
-      <h3>Cubre pañal</h3>
+      <img src="bebes-cubrepanial-2.jpeg" alt="Cubre pañal tejido en crochet estilo floral" loading="lazy">
+      <h3>Cubre pañal floral</h3>
+      <button class="btn-agregar" data-nombre="Cubre pañal floral" data-imagen="bebes-cubrepanial-2.jpeg">🛒 Agregar</button>
     </div>
 
     <div class="item">
-      <img src="WhatsApp Image 2026-05-31 at 11.24.17 PM.jpeg" alt="" width="250px">
+      <img src="bebes-vestido.jpeg" alt="Vestido para bebé tejido en crochet" loading="lazy">
       <h3>Vestidos</h3>
+      <button class="btn-agregar" data-nombre="Vestido bebé" data-imagen="bebes-vestido.jpeg">🛒 Agregar</button>
     </div>
 
   </div>
 </section>
 
+<!-- CARRITO FLOTANTE -->
+<button class="carrito-bubble" id="carrito-bubble" aria-label="Ver carrito">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <path d="M16 10a4 4 0 01-8 0"/>
+  </svg>
+  <span class="carrito-count" id="carrito-count">0</span>
+</button>
+<div class="carrito-panel" id="carrito-panel" aria-hidden="true">
+  <div class="carrito-header">
+    <h3>🧶 Tu carrito</h3>
+    <button class="carrito-close" id="carrito-close" aria-label="Cerrar carrito">&times;</button>
+  </div>
+  <div class="carrito-items" id="carrito-items"><p class="carrito-vacio">Tu carrito está vacío</p></div>
+  <div class="carrito-footer">
+    <button class="btn btn-vaciar" id="btn-vaciar">Vaciar carrito</button>
+    <a href="#" class="btn btn-whatsapp-carrito" id="btn-whatsapp-carrito" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+  </div>
+</div>
+<div class="carrito-overlay" id="carrito-overlay"></div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function() {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.classList.toggle('is-active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('nav-open');
+      hamburger.classList.remove('is-active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+<script>
+  const WA_NUMBER='573052782134';
+  function getCarrito(){return JSON.parse(localStorage.getItem('salupi_carrito')||'[]');}
+  function saveCarrito(c){localStorage.setItem('salupi_carrito',JSON.stringify(c));}
+  function agregarAlCarrito(nombre,imagen){const c=getCarrito();const i=c.findIndex(x=>x.nombre===nombre);if(i>=0){c[i].cantidad++;}else{c.push({nombre,imagen,cantidad:1});}saveCarrito(c);renderCarrito();mostrarNotificacion('¡Agregado al carrito!');}
+  function renderCarrito(){const c=getCarrito();const el=document.getElementById('carrito-items');const cnt=document.getElementById('carrito-count');const t=c.reduce((s,i)=>s+i.cantidad,0);cnt.textContent=t;cnt.style.display=t>0?'flex':'none';if(c.length===0){el.innerHTML='<p class="carrito-vacio">Tu carrito está vacío</p>';return;}el.innerHTML=c.map((item,idx)=>`<div class="carrito-item"><img src="${item.imagen}" alt="${item.nombre}"><div class="carrito-item-info"><p>${item.nombre}</p><div class="carrito-qty"><button onclick="cambiarCantidad(${idx},-1)">−</button><span>${item.cantidad}</span><button onclick="cambiarCantidad(${idx},1)">+</button></div></div><button class="carrito-item-del" onclick="eliminarItem(${idx})">×</button></div>`).join('');const msg=c.map(i=>`• ${i.nombre} x${i.cantidad}`).join('%0A');document.getElementById('btn-whatsapp-carrito').href=`https://wa.me/${WA_NUMBER}?text=Hola%20Salupi!%20Quiero%20hacer%20este%20pedido:%0A${msg}`;}
+  function cambiarCantidad(idx,delta){const c=getCarrito();c[idx].cantidad+=delta;if(c[idx].cantidad<=0)c.splice(idx,1);saveCarrito(c);renderCarrito();}
+  function eliminarItem(idx){const c=getCarrito();c.splice(idx,1);saveCarrito(c);renderCarrito();}
+  function mostrarNotificacion(msg){const n=document.createElement('div');n.className='carrito-notif';n.textContent=msg;document.body.appendChild(n);setTimeout(()=>n.classList.add('visible'),10);setTimeout(()=>{n.classList.remove('visible');setTimeout(()=>n.remove(),300);},2000);}
+  document.addEventListener('DOMContentLoaded',function(){
+    renderCarrito();
+    document.getElementById('carrito-bubble').addEventListener('click',()=>{document.getElementById('carrito-panel').classList.add('open');document.getElementById('carrito-overlay').classList.add('visible');});
+    function cerrarCarrito(){document.getElementById('carrito-panel').classList.remove('open');document.getElementById('carrito-overlay').classList.remove('visible');}
+    document.getElementById('carrito-close').addEventListener('click',cerrarCarrito);
+    document.getElementById('carrito-overlay').addEventListener('click',cerrarCarrito);
+    document.getElementById('btn-vaciar').addEventListener('click',()=>{saveCarrito([]);renderCarrito();});
+    document.querySelectorAll('.btn-agregar').forEach(btn=>{btn.addEventListener('click',function(e){e.preventDefault();agregarAlCarrito(this.dataset.nombre,this.dataset.imagen);});});
+  });
+</script>
 </body>
 </html>

@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salupi Crochet</title>
+  <meta name="description" content="Salupi Crochet — Tejidos hechos a mano con amor. Amigurumis, ropa para bebé, flores, natalicios y más. Cada puntada cuenta.">
+  <meta property="og:title" content="Salupi Crochet">
+  <meta property="og:description" content="Tejidos hechos a mano con amor. Cada puntada cuenta, cada creación tiene historia.">
+  <meta property="og:image" content="salupi-hero.png">
+  <link rel="icon" href="salupi-favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +19,14 @@
 <!-- HEADER -->
 <header>
   <nav class="navbar">
-    <div class="logo"><img src="salupi-logo.PNG" alt="Salupi Crochet" height="50">SALUPI CROCHET</div>
-    <ul class="nav-links">
+    <div class="logo"><img src="salupi-logo.png" alt="Salupi Crochet" height="50">SALUPI CROCHET</div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#productos">Productos</a></li>
+      <li><a href="#personalizar">Personalizar</a></li>
       <li><a href="#historia">Historia</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -40,11 +49,11 @@
     </div>
   </div>
   <div class="hero-decorations">
-    <span class="decoration"><img src="flor.png" alt="Flor" height="70px"></span>
-    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="70px"></span>
-    <span class="decoration"><img src="flor.png" alt="Flor" height="70px"></span>
-    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="70px"></span>
-    <span class="decoration"><img src="flor.png" alt="Flor" height="70px"></span>
+    <span class="decoration"><img src="flor.png" alt="Flor" height="70"></span>
+    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="70"></span>
+    <span class="decoration"><img src="flor.png" alt="Flor" height="70"></span>
+    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="70"></span>
+    <span class="decoration"><img src="flor.png" alt="Flor" height="70"></span>
   </div>
 </section>
 
@@ -57,55 +66,55 @@
 <!-- PRODUCTOS -->
 <section id="productos" class="productos">
   <h2 class="section-title">"¿Qué te gustaría descubrir hoy?"</h2>
-  
+
   <div class="productos-content">
     <img src="salupi-vendidos.png" alt="Salupi señalando" class="mascota mascota-productos" height="70">
-    
+
     <div class="productos-grid">
-    <div class="producto-card">
-      <a href="amigurumis.html">
-        <img src="WhatsApp Image 2026-01-09 at 7.14.49 PM.jpeg" alt="Amigurumis">
-        <h3>Amigurumis</h3>
-        <span class="btn-ver">Ver</span>
-      </a>
-    </div>
-    <div class="producto-card">
-      <a href="bebes.html">
-        <img src="WhatsApp Image 2026-02-12 at 3.47.54 PM (2).jpeg" alt="Ropa para bebés">
-        <h3>Bebés</h3>
-        <span class="btn-ver">Ver</span>
-      </a>
-    </div>
-    <div class="producto-card">
-      <a href="flores.html">
-        <img src="WhatsApp Image 2026-01-09 at 7.12.35 PM (1).jpeg" alt="Flores">
-        <h3>Flores</h3>
-        <span class="btn-ver">Ver</span>
-      </a>
-    </div>
-    <div class="producto-card">
-      <a href="natalicios.html">
-        <img src="i2763601183.webp" alt="Natalicios">
-        <h3>Natalicios</h3>
-        <span class="btn-ver">Ver</span>
-      </a>
-    </div>
-    <div class="producto-card">
-      <a href="otros.html">
-        <img src="WhatsApp Image 2026-01-09 at 7.14.47 PM.jpeg" alt="Otros">
-        <h3>Otros</h3>
-        <span class="btn-ver">Ver</span>
-      </a>
+      <div class="producto-card">
+        <a href="amigurumis.html">
+          <img src="amigurumi-arreglo-floral.jpeg" alt="Amigurumis">
+          <h3>Amigurumis</h3>
+          <span class="btn-ver">Ver</span>
+        </a>
+      </div>
+      <div class="producto-card">
+        <a href="bebes.html">
+          <img src="bebes-portada.jpeg" alt="Ropa para bebés">
+          <h3>Bebés</h3>
+          <span class="btn-ver">Ver</span>
+        </a>
+      </div>
+      <div class="producto-card">
+        <a href="flores.html">
+          <img src="flores-portada.jpeg" alt="Flores">
+          <h3>Flores</h3>
+          <span class="btn-ver">Ver</span>
+        </a>
+      </div>
+      <div class="producto-card">
+        <a href="natalicios.html">
+          <img src="i2763601183.webp" alt="Natalicios">
+          <h3>Natalicios</h3>
+          <span class="btn-ver">Ver</span>
+        </a>
+      </div>
+      <div class="producto-card">
+        <a href="otros.html">
+          <img src="otros-portada.jpeg" alt="Otros">
+          <h3>Otros</h3>
+          <span class="btn-ver">Ver</span>
+        </a>
+      </div>
     </div>
   </div>
-  </div>
-  
+
   <div class="productos-decorations">
-    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50px"></span>
-    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50px"></span>
-    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50px"></span>
-    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50px"></span>
-    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50px"></span>
+    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50"></span>
+    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50"></span>
+    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50"></span>
+    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50"></span>
+    <span class="decoration yarn"><img src="lana.png" alt="Lana" height="50"></span>
   </div>
 </section>
 
@@ -122,19 +131,19 @@
       <div class="timeline-line"></div>
       <div class="timeline-items">
         <div class="timeline-item" data-salupi="salupi-tejiendohistoria.png" data-alt="Salupi pensando">
-          <span class="timeline-icon"><img src="lana.png" alt="Lana" height="60px"></span>
+          <span class="timeline-icon"><img src="lana.png" alt="Lana" height="60"></span>
           <h4>Inicio del sueño</h4>
         </div>
         <div class="timeline-item" data-salupi="salupi-amigurumi.png" data-alt="Salupi mostrando">
-          <span class="timeline-icon"><img src="flor.png" alt="flor" height="60px"></span>
+          <span class="timeline-icon"><img src="flor.png" alt="Flor" height="60"></span>
           <h4>Primer muñeco</h4>
         </div>
         <div class="timeline-item" data-salupi="salupi-pedido.png" data-alt="Salupi emocionada">
-          <span class="timeline-icon"><img src="corazon.png" alt="corazon" height="60px"></span>
+          <span class="timeline-icon"><img src="corazon.png" alt="Corazón" height="60"></span>
           <h4>Primer cliente</h4>
         </div>
         <div class="timeline-item" data-salupi="salupi-diciendo.png" data-alt="Salupi saludando">
-          <span class="timeline-icon"><img src="salupi-cabeza.png" alt="salupi-cabeza" height="60px"></span>
+          <span class="timeline-icon"><img src="salupi-cabeza.png" alt="Salupi" height="60"></span>
           <h4>Hoy comunidad</h4>
         </div>
       </div>
@@ -157,15 +166,64 @@
   <div class="vendidos-grid">
     <div class="vendido-card">
       <span class="vendido-badge">#1</span>
-      <img src="WhatsApp Image 2026-05-31 at 11.31.42 PM.jpeg" alt="">
+      <img src="flores-detalle-floral.jpeg" alt="Producto más vendido #1" loading="lazy">
     </div>
     <div class="vendido-card">
       <span class="vendido-badge">#2</span>
-      <img src="WhatsApp Image 2026-02-12 at 3.47.49 PM (1).jpeg" alt="">
+      <img src="vendido-2.jpeg" alt="Producto más vendido #2" loading="lazy">
     </div>
     <div class="vendido-card">
       <span class="vendido-badge">#3</span>
-      <img src="WhatsApp Image 2026-05-31 at 10.42.12 PM.jpeg" alt="">
+      <img src="amigurumi-peluches.jpeg" alt="Producto más vendido #3" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- PEDIDO PERSONALIZADO -->
+<section id="personalizar" class="personalizar">
+  <h2 class="section-title">Personaliza tu pedido</h2>
+  <p class="personalizar-subtitulo">Elige una base del catálogo y añade tus toques especiales</p>
+
+  <div class="personalizar-contenido">
+    <img src="salupi-pedido.png" alt="Salupi con pedido" class="mascota mascota-personalizar">
+
+    <div class="personalizar-form">
+      <div class="personalizar-paso" id="paso-categoria">
+        <label class="personalizar-label">1. Elige una categoría</label>
+        <div class="categoria-btns">
+          <button class="cat-btn" data-cat="amigurumis">Amigurumis</button>
+          <button class="cat-btn" data-cat="bebes">Bebés</button>
+          <button class="cat-btn" data-cat="flores">Flores</button>
+          <button class="cat-btn" data-cat="natalicios">Natalicios</button>
+          <button class="cat-btn" data-cat="otros">Otros</button>
+        </div>
+      </div>
+
+      <div class="personalizar-paso" id="paso-producto" style="display:none">
+        <label class="personalizar-label">2. Elige un producto base</label>
+        <div class="productos-miniaturas" id="miniaturas-container"></div>
+      </div>
+
+      <div class="personalizar-paso" id="paso-extras" style="display:none">
+        <label class="personalizar-label">3. Personaliza los detalles</label>
+        <div class="extras-grid">
+          <div class="extra-field">
+            <label for="extra-color">Color principal</label>
+            <input type="text" id="extra-color" placeholder="Ej: rosa, azul cielo…">
+          </div>
+          <div class="extra-field">
+            <label for="extra-dedicatoria">Dedicatoria</label>
+            <input type="text" id="extra-dedicatoria" placeholder="Ej: Para mi bebé con amor">
+          </div>
+          <div class="extra-field extra-field-full">
+            <label for="extra-notas">Notas adicionales</label>
+            <textarea id="extra-notas" rows="3" placeholder="Talla, material, referencia de imagen…"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-agregar-personalizado" id="btn-agregar-personalizado">
+          🧶 Agregar al carrito
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -191,12 +249,19 @@
 <!-- GALERÍA INSTAGRAM -->
 <section id="galeria" class="galeria">
   <h2 class="section-title">Mira nuestras creaciones</h2>
-  <div class="galeria-grid">
-    <img src="WhatsApp Image 2026-05-31 at 10.42.08 PM (1).jpeg" alt="Creación 1">
-    <img src="WhatsApp Image 2026-05-31 at 10.42.05 PM (2).jpeg" alt="Creación 2">
-    <img src="WhatsApp Image 2026-05-31 at 10.42.07 PM.jpeg" alt="Creación 3">
-    <img src="WhatsApp Image 2026-05-31 at 10.42.12 PM (1).jpeg" alt="Creación 4">
-    <img src="WhatsApp Image 2026-05-31 at 10.42.14 PM (1).jpeg" alt="Creación 5">
+  <div class="carrusel-wrapper carrusel-galeria" id="carrusel-galeria">
+    <button class="carrusel-btn carrusel-prev" aria-label="Anterior">&#8249;</button>
+    <div class="carrusel-track-container">
+      <div class="carrusel-track">
+        <div class="galeria-slide"><img src="galeria-3.jpeg" alt="Creación 1" loading="lazy"></div>
+        <div class="galeria-slide"><img src="galeria-1.jpeg" alt="Creación 2" loading="lazy"></div>
+        <div class="galeria-slide"><img src="galeria-2.jpeg" alt="Creación 3" loading="lazy"></div>
+        <div class="galeria-slide"><img src="galeria-4.jpeg" alt="Creación 4" loading="lazy"></div>
+        <div class="galeria-slide"><img src="galeria-5.jpeg" alt="Creación 5" loading="lazy"></div>
+      </div>
+    </div>
+    <button class="carrusel-btn carrusel-next" aria-label="Siguiente">&#8250;</button>
+    <div class="carrusel-dots" id="dots-galeria"></div>
   </div>
   <a href="https://www.instagram.com/salupicrochet/" class="btn btn-instagram">Ver Instagram Completo</a>
 </section>
@@ -226,6 +291,33 @@
   </div>
 </footer>
 
+<!-- CARRITO FLOTANTE -->
+<button class="carrito-bubble" id="carrito-bubble" aria-label="Ver carrito">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <path d="M16 10a4 4 0 01-8 0"/>
+  </svg>
+  <span class="carrito-count" id="carrito-count">0</span>
+</button>
+
+<div class="carrito-panel" id="carrito-panel" aria-hidden="true">
+  <div class="carrito-header">
+    <h3>🧶 Tu carrito</h3>
+    <button class="carrito-close" id="carrito-close" aria-label="Cerrar carrito">&times;</button>
+  </div>
+  <div class="carrito-items" id="carrito-items">
+    <p class="carrito-vacio">Tu carrito está vacío</p>
+  </div>
+  <div class="carrito-footer">
+    <button class="btn btn-vaciar" id="btn-vaciar">Vaciar carrito</button>
+    <a href="#" class="btn btn-whatsapp-carrito" id="btn-whatsapp-carrito" target="_blank" rel="noopener">
+      Enviar pedido por WhatsApp
+    </a>
+  </div>
+</div>
+<div class="carrito-overlay" id="carrito-overlay"></div>
+
 <!-- BURBUJA WHATSAPP -->
 <a href="https://wa.me/573052782134" class="whatsapp-bubble" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24" fill="currentColor">
@@ -233,6 +325,26 @@
   </svg>
   <span class="whatsapp-tooltip">¡Escríbenos!</span>
 </a>
+
+<!-- SCRIPT MENÚ HAMBURGUESA -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', function() {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.classList.toggle('is-active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('nav-open');
+      hamburger.classList.remove('is-active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
 
 <!-- SCRIPT INTERACTIVO HISTORIA -->
 <script>
@@ -259,9 +371,6 @@
         }, 200);
       });
 
-      item.addEventListener('mouseleave', function() {
-        // Volver a imagen por defecto cuando se sale de la sección completa
-      });
     });
 
     // Restaurar imagen por defecto al salir de la sección de historia
@@ -276,6 +385,265 @@
         salupiImg.style.opacity = '1';
         salupiImg.style.transform = 'scale(1)';
       }, 200);
+    });
+  });
+</script>
+
+<!-- SCRIPT CARRUSELES -->
+<script>
+  function initCarrusel(wrapperId, dotsId, autoplay) {
+    const wrapper = document.getElementById(wrapperId);
+    if (!wrapper) return;
+    const track = wrapper.querySelector('.carrusel-track');
+    const slides = track.children;
+    const dotsContainer = document.getElementById(dotsId);
+    let current = 0;
+
+    function getVisible() {
+      const w = wrapper.querySelector('.carrusel-track-container').offsetWidth;
+      const sw = slides[0] ? slides[0].offsetWidth : 1;
+      return Math.max(1, Math.round(w / sw));
+    }
+
+    function totalPages() {
+      return Math.ceil(slides.length / getVisible());
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalPages(); i++) {
+        const d = document.createElement('button');
+        d.className = 'carrusel-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Ir a página ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(d);
+      }
+    }
+
+    function goTo(page) {
+      const pages = totalPages();
+      current = (page + pages) % pages;
+      const vis = getVisible();
+      const offset = current * vis * (slides[0] ? slides[0].offsetWidth : 0);
+      track.style.transform = 'translateX(-' + offset + 'px)';
+      dotsContainer.querySelectorAll('.carrusel-dot').forEach((d, i) =>
+        d.classList.toggle('active', i === current));
+    }
+
+    wrapper.querySelector('.carrusel-prev').addEventListener('click', () => goTo(current - 1));
+    wrapper.querySelector('.carrusel-next').addEventListener('click', () => goTo(current + 1));
+
+    buildDots();
+    window.addEventListener('resize', () => { buildDots(); goTo(0); });
+
+    if (autoplay) {
+      setInterval(() => goTo(current + 1), 3000);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    initCarrusel('carrusel-productos', 'dots-productos', false);
+    initCarrusel('carrusel-galeria', 'dots-galeria', true);
+  });
+</script>
+
+<!-- SCRIPT CARRITO -->
+<script>
+  const WA_NUMBER = '573052782134';
+
+  function getCarrito() {
+    return JSON.parse(localStorage.getItem('salupi_carrito') || '[]');
+  }
+  function saveCarrito(c) {
+    localStorage.setItem('salupi_carrito', JSON.stringify(c));
+  }
+
+  function agregarAlCarrito(nombre, imagen) {
+    const carrito = getCarrito();
+    const idx = carrito.findIndex(i => i.nombre === nombre);
+    if (idx >= 0) {
+      carrito[idx].cantidad++;
+    } else {
+      carrito.push({ nombre, imagen, cantidad: 1 });
+    }
+    saveCarrito(carrito);
+    renderCarrito();
+    mostrarNotificacion('¡Agregado al carrito!');
+  }
+
+  function renderCarrito() {
+    const carrito = getCarrito();
+    const container = document.getElementById('carrito-items');
+    const countEl = document.getElementById('carrito-count');
+    const total = carrito.reduce((s, i) => s + i.cantidad, 0);
+    countEl.textContent = total;
+    countEl.style.display = total > 0 ? 'flex' : 'none';
+
+    if (carrito.length === 0) {
+      container.innerHTML = '<p class="carrito-vacio">Tu carrito está vacío</p>';
+      return;
+    }
+
+    container.innerHTML = carrito.map((item, idx) => `
+      <div class="carrito-item">
+        <img src="${item.imagen}" alt="${item.nombre}">
+        <div class="carrito-item-info">
+          <p>${item.nombre}</p>
+          <div class="carrito-qty">
+            <button onclick="cambiarCantidad(${idx}, -1)">−</button>
+            <span>${item.cantidad}</span>
+            <button onclick="cambiarCantidad(${idx}, 1)">+</button>
+          </div>
+        </div>
+        <button class="carrito-item-del" onclick="eliminarItem(${idx})" aria-label="Eliminar">×</button>
+      </div>
+    `).join('');
+
+    const msg = carrito.map(i => `• ${i.nombre} x${i.cantidad}`).join('%0A');
+    document.getElementById('btn-whatsapp-carrito').href =
+      `https://wa.me/${WA_NUMBER}?text=Hola%20Salupi!%20Quiero%20hacer%20este%20pedido:%0A${msg}`;
+  }
+
+  function cambiarCantidad(idx, delta) {
+    const carrito = getCarrito();
+    carrito[idx].cantidad += delta;
+    if (carrito[idx].cantidad <= 0) carrito.splice(idx, 1);
+    saveCarrito(carrito);
+    renderCarrito();
+  }
+
+  function eliminarItem(idx) {
+    const carrito = getCarrito();
+    carrito.splice(idx, 1);
+    saveCarrito(carrito);
+    renderCarrito();
+  }
+
+  function mostrarNotificacion(msg) {
+    const n = document.createElement('div');
+    n.className = 'carrito-notif';
+    n.textContent = msg;
+    document.body.appendChild(n);
+    setTimeout(() => n.classList.add('visible'), 10);
+    setTimeout(() => { n.classList.remove('visible'); setTimeout(() => n.remove(), 300); }, 2000);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    renderCarrito();
+
+    document.getElementById('carrito-bubble').addEventListener('click', () => {
+      document.getElementById('carrito-panel').classList.add('open');
+      document.getElementById('carrito-overlay').classList.add('visible');
+    });
+
+    function cerrarCarrito() {
+      document.getElementById('carrito-panel').classList.remove('open');
+      document.getElementById('carrito-overlay').classList.remove('visible');
+    }
+
+    document.getElementById('carrito-close').addEventListener('click', cerrarCarrito);
+    document.getElementById('carrito-overlay').addEventListener('click', cerrarCarrito);
+
+    document.getElementById('btn-vaciar').addEventListener('click', () => {
+      saveCarrito([]);
+      renderCarrito();
+    });
+
+    document.querySelectorAll('.btn-agregar').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        agregarAlCarrito(this.dataset.nombre, this.dataset.imagen);
+      });
+    });
+  });
+</script>
+
+<!-- SCRIPT PEDIDO PERSONALIZADO -->
+<script>
+  const catalogoData = {
+    amigurumis: [
+      { nombre: 'Arreglo floral con muñeco', imagen: 'amigurumi-arreglo-floral.jpeg' },
+      { nombre: 'Muñeco médico', imagen: 'amigurumi-medico.jpeg' },
+      { nombre: 'Personajes', imagen: 'amigurumi-personajes.jpeg' },
+      { nombre: 'Peluches', imagen: 'amigurumi-peluches.jpeg' },
+      { nombre: 'Centro de mesa', imagen: 'amigurumi-centro-mesa.jpeg' },
+      { nombre: 'Profesiones', imagen: 'amigurumi-profesiones.jpeg' }
+    ],
+    bebes: [
+      { nombre: 'Cubre pañal 1', imagen: 'bebes-cubrepanial-1.jpeg' },
+      { nombre: 'Cubre pañal 2', imagen: 'bebes-cubrepanial-2.jpeg' },
+      { nombre: 'Vestido bebé', imagen: 'bebes-vestido.jpeg' }
+    ],
+    flores: [
+      { nombre: 'Detalle floral', imagen: 'flores-detalle-floral.jpeg' },
+      { nombre: 'Orquídeas', imagen: 'flores-orquideas.jpeg' },
+      { nombre: 'Macetas', imagen: 'flores-macetas.jpeg' }
+    ],
+    natalicios: [
+      { nombre: 'Natalicio', imagen: 'i2763601183.webp' }
+    ],
+    otros: [
+      { nombre: 'Lámpara', imagen: 'otros-lamparas.jpeg' },
+      { nombre: 'Gorros', imagen: 'otros-gorros.jpeg' },
+      { nombre: 'Llavero', imagen: 'otros-llavero.jpeg' }
+    ]
+  };
+
+  let productoSeleccionado = null;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const pasoProd = document.getElementById('paso-producto');
+    const pasoExtras = document.getElementById('paso-extras');
+    const miniaturasContainer = document.getElementById('miniaturas-container');
+
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const cat = this.dataset.cat;
+        const productos = catalogoData[cat] || [];
+
+        miniaturasContainer.innerHTML = productos.map((p, i) => `
+          <div class="miniatura-item" data-idx="${i}" data-cat="${cat}">
+            <img src="${p.imagen}" alt="${p.nombre}">
+            <span>${p.nombre}</span>
+          </div>
+        `).join('');
+
+        productoSeleccionado = null;
+        pasoProd.style.display = 'block';
+        pasoExtras.style.display = 'none';
+
+        miniaturasContainer.querySelectorAll('.miniatura-item').forEach(el => {
+          el.addEventListener('click', function() {
+            miniaturasContainer.querySelectorAll('.miniatura-item').forEach(m => m.classList.remove('active'));
+            this.classList.add('active');
+            const idx = parseInt(this.dataset.idx);
+            const cat2 = this.dataset.cat;
+            productoSeleccionado = catalogoData[cat2][idx];
+            pasoExtras.style.display = 'block';
+            pasoExtras.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          });
+        });
+      });
+    });
+
+    document.getElementById('btn-agregar-personalizado').addEventListener('click', function() {
+      if (!productoSeleccionado) return;
+      const color = document.getElementById('extra-color').value.trim();
+      const dedicatoria = document.getElementById('extra-dedicatoria').value.trim();
+      const notas = document.getElementById('extra-notas').value.trim();
+      const extras = [color && 'Color: ' + color, dedicatoria && 'Dedicatoria: ' + dedicatoria, notas && 'Notas: ' + notas].filter(Boolean).join(' | ');
+      const nombre = productoSeleccionado.nombre + (extras ? ' (' + extras + ')' : '');
+      agregarAlCarrito(nombre, productoSeleccionado.imagen);
+      document.getElementById('extra-color').value = '';
+      document.getElementById('extra-dedicatoria').value = '';
+      document.getElementById('extra-notas').value = '';
+      miniaturasContainer.querySelectorAll('.miniatura-item').forEach(m => m.classList.remove('active'));
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      productoSeleccionado = null;
+      pasoProd.style.display = 'none';
+      pasoExtras.style.display = 'none';
     });
   });
 </script>
